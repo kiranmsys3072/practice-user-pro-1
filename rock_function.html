@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <button onclick="
+    // const computerValue=compFunction()
+     gameFunction('rock') ">Rock</button>
+   <button onclick="
+  //  const computerValue= compFunction()
+    gameFunction('paper')">Paper</button>
+    <button onclick="
+  // const computerValue=compFunction()
+    gameFunction('sizer')">sizer</button>
+    <script>
+         //let computerValue=''  and trying with return
+        function compFunction(){
+            let computerValue=''
+        
+        let num=Math.random()
+        if(num >0 && num< 1/3){
+            computerValue='rock'
+        }else if(num>1/3 && num <2/3){
+            computerValue='paper'
+
+        }else{
+            computerValue='sizer'
+        }
+        return computerValue
+
+        }
+        function gameFunction(ourValue){
+            const computerValue=compFunction()
+
+
+            if(ourValue == "sizer"){
+
+              if(computerValue === 'rock'){
+                console.log(` your picked ${ourValue} but computer picked ${computerValue},  You Lose`)
+              }else   if(computerValue === 'paper'){
+                console.log(` your picked  ${ourValue}  but computer picked ${computerValue},  You  win`)
+              }else{
+                console.log(` your picked ${ourValue}  but computer picked ${computerValue},  Tie`)
+                 }
+                    }
+            else if(ourValue == "rock"){
+                    if(computerValue === 'rock'){
+                        console.log(` your picked rock but computer picked ${computerValue},  Tie`)
+                    }else   if(computerValue === 'paper'){
+                        console.log(` your picked rock but computer picked ${computerValue},  You Lose`)
+                    }else{
+                        console.log(` your picked rock  but computer picked ${computerValue},  You Win`)
+                    }
+            
+
+            }
+            else if(ourValue == "paper"){
+                                        
+                        if(computerValue === 'rock'){
+                            console.log(` your picked paper but computer picked ${computerValue},  You win`)
+                        }else   if(computerValue === 'paper'){
+                            console.log(` your picked paper but computer picked ${computerValue},  Tie`)
+                        }else{
+                            console.log(` your picked paper but computer picked ${computerValue},  You lose`)
+                        }
+
+            }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

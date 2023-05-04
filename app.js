@@ -6,9 +6,10 @@ app.use(express.urlencoded({ extended: true }));
 
 var ObjectId = require('mongoose').Types.ObjectId; 
 
-
 const url="mongodb://localhost:27017/fakeuser"
 mongoose.connect(url,{
+    useNewUrlParser: true ,
+    useMongoClient: true
     // useMongoClient:true,
     // useUnifiedTopology:true
 }).then((res)=>{
